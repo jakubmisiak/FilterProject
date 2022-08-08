@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+        @using (Html.BeginForm("Filter", "Home"))
+        {
+            @Html.Label("Write numbers in format [x, y, z]")
+            <br/>
+            @Html.TextBox("stringOfNumbers")<input type="submit" value="Filter">
+        }
+        <br/>
+        @TempData["Result"]
+</div>
